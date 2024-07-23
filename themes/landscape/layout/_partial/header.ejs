@@ -1,21 +1,21 @@
 <header id="header">
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-  <div id="banner" style="display: flex; justify-content: center;">
-    <img id="logo-image" alt="amfoss logo" src="/image/logo-light.png" style="width: 100vw; max-width: 500px; top: 40px; margin-bottom: 40px;">
+  <div id="banner" class="banner">
+    <img id="logo-image" alt="amfoss logo" src="/image/logo-light.png">
   </div>
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
-      <button id="theme-toggle" onclick="toggleTheme()" style="margin-top:40px; display: flex; justify-content: right; border: none; background: transparent;">
-        <i class="material-icons" id="theme-icon">sunny</i>
-      </button>
       <% if (theme.subtitle || config.subtitle) { %>
-        <h2 id="subtitle-wrap" style="margin-bottom: 40px;">
+        <h2 id="subtitle-wrap">
           <span id="subtitle"><%= theme.subtitle || config.subtitle %></span>
         </h2>
       <% } %>
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
+        <button id="theme-toggle" onclick="toggleTheme()">
+          <i class="material-icons" id="theme-icon">sunny</i>
+        </button>
         <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         <% for (var i in theme.menu) { %>
           <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>

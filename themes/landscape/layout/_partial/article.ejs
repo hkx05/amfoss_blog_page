@@ -21,6 +21,11 @@
       <% } else { %>
         <%- post.content %>
       <% } %>
+      <% if (post.author && post.twitter) { %>
+        <p>Written by <a href="https://twitter.com/<%- post.twitter %>" target="_blank" rel="noopener noreferrer" id="social_link"><%- post.author %></a></p>
+      <% } else if (post.author) { %>
+        <p>Written by <%- post.author %></p>
+      <% } %>
     </div>
     <footer class="article-footer">
       <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" data-title="<%= post.title %>" class="article-share-link"><span class="fa fa-share"><%= __('share') %></span></a>

@@ -43,7 +43,7 @@ tags:
 ```
 ## General Guidelines:
 
-* Use `<!--more-->` after conveying the important points in the `tl;dr` and add a new line after `tl;dr` and befire <!--more-->.
+* Use `<!--more-->` after conveying the important points in the `tl;dr` and add a new line after `tl;dr` and before `<!--more-->`
 
 * Use footnotes with [^1]
 

@@ -6,20 +6,22 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <% if (theme.subtitle || config.subtitle) { %>
-        <h2 id="subtitle-wrap">
-          <span id="subtitle"><%= theme.subtitle || config.subtitle %></span>
-        </h2>
+        <div id="subtitle-container">
+          <h2 id="subtitle-wrap">
+            <span id="subtitle"><%= theme.subtitle || config.subtitle %></span>
+          </h2>
+        </div>
       <% } %>
     </div>
     <div id="header-inner" class="inner">
       <nav id="main-nav">
-        <button id="theme-toggle" onclick="toggleTheme()">
-          <i class="material-icons" id="theme-icon">sunny</i>
-        </button>
         <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
         <% for (var i in theme.menu) { %>
           <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
         <% } %>
+        <button id="theme-toggle" onclick="toggleTheme()">
+          <i class="material-icons" id="theme-icon">sunny</i>
+        </button>
       </nav>
       <nav id="sub-nav">
         <% if (theme.links) { %>

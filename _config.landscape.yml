@@ -2,7 +2,7 @@ menu:
   Home: /
   Archives: /archives
 rss: /atom.xml
-banner: /image/amfoss-dark.png
+banner: 
 subtitle: The official blog page of amFOSS
 favicon: /image/favicon.jpg
 

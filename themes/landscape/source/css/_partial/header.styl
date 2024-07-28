@@ -18,20 +18,31 @@
 #header-outer
   height: 100%
 
-button  
-
 #header-inner
   position: relative
   overflow: hidden
   z-index: 1;
 
 #logo-image
+  padding-top: 35px
+  padding-bottom: 35px
   display: block
   margin: 0 auto
   max-width: 100%
 
 #header-title
   text-align: center
+
+#main-nav {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: 0px;
+  background: transparent;
+  left: 10px;
+}
 
 #logo
   text-decoration: none
@@ -158,8 +169,11 @@ $nav-link
   cursor: pointer
   &:hover, &:focus
     color: #777
-
+  
 @media (max-width: 768px)
   #banner
     width: 100%
     top: 10%
+  
+  #subtitle
+    display: none
